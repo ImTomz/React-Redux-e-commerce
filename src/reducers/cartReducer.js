@@ -9,6 +9,15 @@ const cartReducer = (state = [], action) => {
           id: action.id
         }
       ];
+      case "REMOVEFROMCART":
+        let newState = [...state];
+        newState.splice(action.index, 1);
+        return newState;
+
+      case "RESETCART":
+        let resetState = [];
+        return resetState
+        
     default:
       return state;
   }
