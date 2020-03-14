@@ -12,9 +12,6 @@ export default function Product({ name, price, id }) {
             <h2>{name}</h2>
             <div className="flex">
               <p>{price} $</p>
-              <Link to={"/products/product?id=" + id}>
-                <button>See more</button>
-              </Link>
             </div>
           </div>
         </div>

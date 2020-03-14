@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 
 export default function ListProducts() {
   const products = useSelector(state => state.products);
+
+  //Search input value
   const [text, setText] = useState("");
 
   return (

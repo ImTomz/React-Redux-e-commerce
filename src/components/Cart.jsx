@@ -7,10 +7,10 @@ import { removeFromCart } from "../actions/removeFromCart";
 import { resetCart } from "../actions/resetCart";
 
 function Cart() {
-  const productsInCart = useSelector(state => state.cartItems);
   const dispatch = useDispatch();
 
   //Map trough products in cart and showing them
+  const productsInCart = useSelector(state => state.cartItems);
   const showProductsInCart = productsInCart.map((element, index) => {
     return (
       <div key={index} className="cart-product">
@@ -38,6 +38,7 @@ function Cart() {
     <div className="center">
       <div className="flex-container">
         {productsInCart.length > 0 ? (
+          //If cart is not empty
           <div className="cart-container">
             {showProductsInCart}
             <div className="total-price">
@@ -58,6 +59,7 @@ function Cart() {
             </div>
           </div>
         ) : (
+          //If cart is empty
           <div className="empty-container">
             <h1> cart empty </h1>
             <Link to="/products">
