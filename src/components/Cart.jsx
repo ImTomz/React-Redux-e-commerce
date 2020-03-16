@@ -9,6 +9,22 @@ import { resetCart } from "../actions/resetCart";
 function Cart() {
   const dispatch = useDispatch();
 
+  //Showing orders in cart
+  const ordersState = useSelector(state => state.order);
+  const showOrders = ordersState.map((order, index) => {
+    return (
+      <div key={index} className="order-container">
+        <h3>Order ID: {order.orderID}</h3>
+        <div className="ordered-products">
+          {order.orderedProducts.map(item => {
+            return <div>{item.itemName}</div>;
+          })}
+        </div>
+        <p>{order.toPay}$</p>
+      </div>
+    );
+  });
+
   //Map trough products in cart and showing them
   const productsInCart = useSelector(state => state.cartItems);
   const showProductsInCart = productsInCart.map((element, index) => {
@@ -57,14 +73,24 @@ function Cart() {
                 Make Order
               </button>
             </div>
+            <div>
+              <h3 className="order">Last Orders:</h3>
+              {showOrders}
+            </div>
           </div>
         ) : (
           //If cart is empty
           <div className="empty-container">
-            <h1> cart empty </h1>
-            <Link to="/products">
-              <button>Continue Shoping</button>
-            </Link>
+            <div className="empty-flex">
+              <h1> cart empty </h1>
+              <Link to="/products">
+                <button>Continue Shoping</button>
+              </Link>
+            </div>
+            <div className="orders-container">
+              <h3 className="order">Last Orders:</h3>
+              {showOrders}
+            </div>
           </div>
         )}
       </div>

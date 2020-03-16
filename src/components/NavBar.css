@@ -3,6 +3,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 6vh;
+
   background-color: #fff;
 }
 
@@ -22,15 +23,7 @@ ul li a {
   justify-content: center;
 }
 
-.line {
-  width: 25px;
-  height: 4px;
-  margin-bottom: 3px;
-  background-color: #000;
-}
-
 .active-link {
-  text-decoration: underline;
   color: grey;
 }
 

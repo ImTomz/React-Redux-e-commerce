@@ -11,7 +11,7 @@ function NavBar() {
       <ul>
         <li>
           <NavLink exact to="/" className="link" activeClassName="active-link">
-            Home
+            <h4>Home</h4>
           </NavLink>
         </li>
         <li>
@@ -20,13 +20,14 @@ function NavBar() {
             className="link"
             activeClassName="active-link"
           >
-            Products
+            <h4>Products</h4>
           </NavLink>
         </li>
       </ul>
       <div className="cart">
         <NavLink to="/cart" className="link" activeClassName="active-link">
-          Cart
+          <h4>Cart </h4>
+          <i class="fas fa-shopping-cart fa-lg"></i>
         </NavLink>
       </div>
     </nav>

@@ -20,7 +20,7 @@ export default function ShowProduct() {
   const query = useQuery();
   const id = query.get("id");
   const filteredItem = allProducts.filter(item => {
-    return item.id == id;
+    return item.id == id; // eslint-disable-line
   });
 
   return (
