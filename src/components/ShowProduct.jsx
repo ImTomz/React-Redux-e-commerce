@@ -24,20 +24,25 @@ export default function ShowProduct() {
   });
 
   return (
-    <div>
+    <div className="center">
       {filteredItem.map((item, index) => {
         return (
-          <div key={index}>
-            <h1>{item.name}</h1>
-            <p>{item.price}$</p>
-            <p>{item.info}</p>
-            <button
-              onClick={() => {
-                dispatch(addToCart(item.name, item.price, item.id));
-              }}
-            >
-              add to cart
-            </button>
+          <div key={index} className="flex-container">
+            <div className="photo">Photo of Product</div>
+            <div className="info">
+              <h1>{item.name}</h1>
+              <p>{item.info}</p>
+              <div className="price-add-btn">
+                <p style={{ fontWeight: "bold" }}>{item.price}$</p>
+                <button
+                  onClick={() => {
+                    dispatch(addToCart(item.name, item.price, item.id));
+                  }}
+                >
+                  add to cart
+                </button>
+              </div>
+            </div>
           </div>
         );
       })}

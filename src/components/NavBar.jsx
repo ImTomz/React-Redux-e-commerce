@@ -1,8 +1,11 @@
 import React from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function NavBar() {
+  const itemsInCart = useSelector(state => state.cartItems);
+
   return (
     <nav>
       <NavLink to="/">
@@ -26,8 +29,11 @@ function NavBar() {
       </ul>
       <div className="cart">
         <NavLink to="/cart" className="link" activeClassName="active-link">
+          <i className="fas fa-shopping-cart fa-lg"></i>
           <h4>Cart </h4>
-          <i class="fas fa-shopping-cart fa-lg"></i>
+          <p style={{ color: "red", fontWeight: "bold" }}>
+            {itemsInCart.length > 0 && itemsInCart.length}
+          </p>
         </NavLink>
       </div>
     </nav>

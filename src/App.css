@@ -17,3 +17,16 @@ a {
   text-decoration: none;
   color: #000;
 }
+
+button {
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
+button:active {
+  color: lightgrey;
+  border: solid 1px lightgrey;
+}

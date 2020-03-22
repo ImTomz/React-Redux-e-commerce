@@ -16,11 +16,11 @@ function Cart() {
       <div key={index} className="order-container">
         <h3>Order ID: {order.orderID}</h3>
         <div className="ordered-products">
-          {order.orderedProducts.map(item => {
-            return <div>{item.itemName}</div>;
+          {order.orderedProducts.map((item, index) => {
+            return <div key={index}>{item.itemName}</div>;
           })}
         </div>
-        <p>{order.toPay}$</p>
+        <h3>For pay: {order.toPay}$</h3>
       </div>
     );
   });
@@ -35,6 +35,7 @@ function Cart() {
             onClick={() => {
               dispatch(removeFromCart(index));
             }}
+            style={{ color: "red" }}
           >
             X
           </button>
@@ -75,7 +76,7 @@ function Cart() {
             </div>
             <div>
               <h3 className="order">Last Orders:</h3>
-              {showOrders}
+              {showOrders.length < 1 ? <p>Orders are empty</p> : showOrders}
             </div>
           </div>
         ) : (
@@ -89,7 +90,7 @@ function Cart() {
             </div>
             <div className="orders-container">
               <h3 className="order">Last Orders:</h3>
-              {showOrders}
+              {showOrders.length < 1 ? <p>Orders are empty</p> : showOrders}
             </div>
           </div>
         )}

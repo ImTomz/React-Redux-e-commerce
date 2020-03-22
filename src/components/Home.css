@@ -6,6 +6,10 @@
   min-height: 90vh;
 }
 
+.home h1 {
+  padding: 10%;
+  text-align: center;
+}
 .feat-container {
   display: flex;
   justify-content: space-around;
