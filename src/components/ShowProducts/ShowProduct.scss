@@ -1,0 +1,59 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 94vh;
+
+  .flex-container {
+    width: 80vw;
+    display: flex;
+    min-height: 70vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 12vh 0;
+
+    .photo {
+      width: 40%;
+      height: 40vh;
+      border: solid 1px #000;
+      border-radius: 5px;
+      margin: 2%;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      height: 40vh;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .price-add-btn {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 5%;
+    .photo {
+      width: 100%;
+    }
+    .info {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

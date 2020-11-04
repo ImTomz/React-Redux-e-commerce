@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Product from "./Product";
+import Product from "../Product/Product";
 import "./ListProducts.css";
 import { useSelector } from "react-redux";
 

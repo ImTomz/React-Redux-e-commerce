@@ -1,0 +1,23 @@
+.box-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #fff;
+  margin: 10px;
+
+  .text-container {
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .flex {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

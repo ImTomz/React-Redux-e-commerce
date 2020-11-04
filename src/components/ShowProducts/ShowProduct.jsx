@@ -1,8 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../actions/addToCart";
+import { addToCart } from "../../actions/addToCart";
 import "./ShowProduct.css";
 
 //URL Id
@@ -28,7 +27,7 @@ export default function ShowProduct() {
       {filteredItem.map((item, index) => {
         return (
           <div key={index} className="flex-container">
-            <div className="photo">Photo of Product</div>
+            <div className="photo"></div>
             <div className="info">
               <h1>{item.name}</h1>
               <p>{item.info}</p>

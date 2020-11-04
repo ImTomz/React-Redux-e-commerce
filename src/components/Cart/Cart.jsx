@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Cart.css";
 import { Link } from "react-router-dom";
-import { makeOrder } from "../actions/makeOrder";
-import { removeFromCart } from "../actions/removeFromCart";
-import { resetCart } from "../actions/resetCart";
+import { makeOrder } from "../../actions/makeOrder";
+import { removeFromCart } from "../../actions/removeFromCart";
+import { resetCart } from "../../actions/resetCart";
 
 function Cart() {
   const dispatch = useDispatch();
